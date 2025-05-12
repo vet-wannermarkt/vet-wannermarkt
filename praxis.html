@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierpraxis am Wanner Markt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="Business Logo"></a>
+        </div>
+        <div class="business-name">
+            <h2><center>Tierpraxis <br>am Wanner Markt</center></h2>
+        </div>
+    </header>
+  
+    <a href="tel:01749629763" class="floating-call-button" title="Notfall anrufen">
+        📞 Notfall
+      </a>
+
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> Menu
+        </button>
+        <ul id="menu-bar">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="praxis.html">Praxis</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="stellenangebote.html">Stellenangebote</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="terminvereinbarung.html">Terminvereinbarung</a></li>
+            <li><a href="openinghours.html">Öffnungszeiten</a></li>
+            <li><a href="anfahrt.html">Anfahrt</a></li>
+            <li><a href="bewertungen.html">Bewertungen</a></li>
+            <li><a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/">facebook</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <center>
+            <h1>Herzlich Willkommen in der Tierpraxis am Wanner Markt</h1>
+            <h1><br></h1>
+            <p>In unserer modernen und gut ausgestatteten Tierpraxis bieten wir Ihrem Haustier eine umfassende medizinische Betreuung. 
+                </p>Wir setzen auf fachkundige Versorgung und eine individuelle Betreuung, um die Gesundheit und das Wohlbefinden Ihres tierischen Begleiters zu fördern. 
+            </p>Mit modernster Technik und einer auf das Tierwohl abgestimmten Behandlung sorgen wir dafür, dass Ihr Haustier sich bei uns gut aufgehoben fühlt.
+                        <p> ❤️🐾🐶🐱🐾❤️</p>
+        </center>     
+                            
+            
+            <h1><br></h1>
+           <center> <h2>Unsere Praxis in Bildern</h2></center>
+            <div class="slideshow-wrapper">
+            
+                <div class="slideshow-container">
+              <div class="slide"><img src="assets/sleidshow1/Empfang.jpeg" alt="Foto 1"></div>
+              <div class="slide"><img src="assets/sleidshow1/Bildung.jpeg" alt="Foto 2"></div>
+              <div class="slide"><img src="assets/sleidshow1/Wartezimmer3.jpeg" alt="Foto 3"></div>
+              <div class="slide"><img src="assets/sleidshow1/OP3.jpeg" alt="Foto 4"></div>
+              <div class="slide"><img src="assets/sleidshow1/Wartezimmer3.jpeg" alt="Foto 5"></div>
+              <div class="slide"><img src="assets/sleidshow1/Untersuchung1.jpeg" alt="Foto 5"></div>
+              <div class="slide"><img src="assets/sleidshow1/Untersuchung2.jpeg" alt="Foto 5"></div>
+              <div class="slide"><img src="assets/sleidshow1/Wartezimmer2.jpeg" alt="Foto 5"></div>
+
+
+
+          
+              <a class="prev" onclick="manualSlide(-1)">❮</a>
+              <a class="next" onclick="manualSlide(1)">❯</a>
+
+        </div>
+        <br><br>
+    
+        <h3>Schauen Sie gerne persönlich bei uns vorbei – wir freuen uns auf Ihren Besuch!</h3>
+
+
+
+        </main>
+          
+          
+          <script>
+            let currentSlide = 0;
+            let slideTimeout;
+            const slideDuration = 5000; // 5 Sekunden
+            const resumeAfterManual = 20000; // 20 Sekunden nach manuellem Wechsel
+          
+            const slides = document.querySelectorAll('.slide');
+          
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+              });
+              currentSlide = index;
+            }
+          
+            function nextSlide() {
+              let next = (currentSlide + 1) % slides.length;
+              showSlide(next);
+              slideTimeout = setTimeout(nextSlide, slideDuration);
+            }
+          
+            function manualSlide(direction) {
+              clearTimeout(slideTimeout);
+              let newIndex = (currentSlide + direction + slides.length) % slides.length;
+              showSlide(newIndex);
+              slideTimeout = setTimeout(nextSlide, resumeAfterManual);
+            }
+          
+            // Start
+            showSlide(currentSlide);
+            slideTimeout = setTimeout(nextSlide, slideDuration);
+          </script>
+          
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://whatsapp.com/channel/0029Vb5nR5D0gcfCuvVYgl23" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+         <!--     <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>      
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+    -->
+        </div>
+        <div class="privacy">
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+    <script>
+        // Function to toggle the visibility of the menu
+        function toggleMenu() {
+            var menu = document.getElementById('menu-bar');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling on the entire page */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: #393939;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Container for the website content */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Foto Slide content */
+
+.slideshow-wrapper {
+    max-width: 70vw;    /* Breite relativ zur Viewport-Breite */
+    height: 20vh;      /* Feste Höhe */
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    position: relative; /* Container für absolute Position der Pfeile */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    display: none;
+    text-align: center; /* zentriert den Inhalt horizontal */
+}
+
+.slide img {
+    display: inline-block; /* wichtig für zentriertes Bild */
+    max-width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+
+/* Pfeile */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px 18px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 20px;  /* Abstand vom linken Rand des Containers */
+}
+
+.next {
+    right: 20px; /* Abstand vom rechten Rand des Containers */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Header should be fixed at the top */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 10px;
+    background-color: #55c1a8;
+    color: #393939;
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px; /* Set a fixed height for the header */
+    z-index: 10; /* Ensure the header stays above other content */
+}
+
+/* Logo styling for desktop */
+.logo img {
+    width: auto; /* Adjust the desktop width */
+    height: 90px; /* Keep the logo's aspect ratio */
+}
+
+video {
+    width: 100%; /* Makes the video take full width of its container */
+    max-width: 800px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+img {
+    width: 100%; /* Makes all images responsive */
+    max-width: 600px; /* Sets a max width for all images */
+    height: auto; /* Keeps the aspect ratio */
+    margin: 10px; /* Adds space between images */
+    display: block; /* Ensures images don't overflow */
+}
+
+/* Navigation Bar (Menu) fixed below the header */
+nav {
+    background-color: #ffffff;
+    position: fixed; /* Fix the navigation menu just below the header */
+    top: 90px; /* Offset by the height of the header */
+    left: 0;
+    right: 0;
+    z-index: 10; /* Ensure the menu stays above the content */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the menu items horizontally */
+}
+
+.floating-call-button {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: white;
+    color: #000000;
+    padding: 15px 20px;
+    border: 5px solid #d33431; /* hier ist die Border */
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+
+.floating-call-button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+
+/* NEW: Menu button for mobile */
+.menu-button {
+    display: none; /* Hidden by default */
+    font-size: 30px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+.menu-button:focus {
+    outline: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #393939;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #55c1a8;
+}
+
+/* Main Content should scroll within available space */
+main {
+    flex-grow: 1;
+    overflow-y: auto; /* Enable vertical scrolling for the main content */
+    margin-top: 130px; /* Add margin to offset both the fixed header and menu */
+    margin-bottom: 60px; /* Add margin to avoid overlap with the fixed footer */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Footer should be fixed at the bottom */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #55c1a8;
+    color: white;
+    position: fixed; /* Fix the footer at the bottom */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20px; /* Set a fixed height for the footer */
+    z-index: 10; /* Ensure the footer stays above other content */
+}
+
+.social-media a {
+    margin-right: 5px; /* Adds space between the links */
+    color: #393939;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-media a:hover {
+    color: #393939;
+}
+
+.social-media i {
+    margin-right: 3px; /* Adds space between icon and text */
+}
+
+footer a {
+    text-decoration: none;
+    color: #393939;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 768px) {
+    /* Hide the regular menu and show the menu button on smaller screens */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        padding: 10px;
+        background-color: #55c1a8;
+        color: #393939;
+        position: fixed; /* Fix the header at the top */
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px; /* Set a fixed height for the header */
+        z-index: 10; /* Ensure the header stays above other content */
+    }
+    nav ul {
+        display: none; /* Hide the regular menu */
+        flex-direction: column; /* Stack items vertically */
+        background-color: #393939;
+        text-align: center;
+    }
+    .menu-button {
+        display: none; /* Hidden by default */
+        font-size: 15px;
+        background-color: #393939;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+    }
+    nav {
+        background-color: #ffffff;
+        position: fixed; /* Fix the navigation menu just below the header */
+        top: 70px; /* Offset by the height of the header */
+        left: 0;
+        right: 0;
+        z-index: 10; /* Ensure the menu stays above the content */
+    }
+    .menu-button {
+        display: block; /* Show the menu button on mobile */
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    nav ul li a {
+        color: white;
+        padding: 10px;
+    }
+
+    nav ul li a:hover {
+        background-color: #393939;
+    }
+
+    /* Foto Slide content */
+
+.slideshow-wrapper {
+    max-width: 90vw;    /* Breite relativ zur Viewport-Breite */
+    height: 40vh;      /* Feste Höhe */
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.slideshow-container {
+    position: relative; /* Container für absolute Position der Pfeile */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slide {
+    display: none;
+    text-align: center; /* zentriert den Inhalt horizontal */
+}
+
+.slide img {
+    display: inline-block; /* wichtig für zentriertes Bild */
+    max-width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+/* Pfeile */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px 18px;
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 50%;
+    user-select: none;
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 20px;  /* Abstand vom linken Rand des Containers */
+}
+
+.next {
+    right: 20px; /* Abstand vom rechten Rand des Containers */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+    footer {
+        flex-direction: none;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        text-align: center;
+    }
+
+    .footer-right a {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
+    .business-name a {
+        font-size: 16px;
+    }
+
+    footer div {
+        margin-bottom: 0px;
+    }
+
+}
+
+

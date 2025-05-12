@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierpraxis am Wanner Markt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="Business Logo"></a>
+        </div>
+        <div class="business-name">
+            <h2><center>Tierpraxis <br>am Wanner Markt</center></h2>
+        </div>
+    </header>
+
+    <a href="tel:01749629763" class="floating-call-button" title="Notfall anrufen">
+        📞 Notfall
+      </a>
+
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> Menu
+        </button>
+        <ul id="menu-bar">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="praxis.html">Praxis</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="stellenangebote.html">Stellenangebote</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="terminvereinbarung.html">Terminvereinbarung</a></li>
+            <li><a href="openinghours.html">Öffnungszeiten</a></li>
+            <li><a href="anfahrt.html">Anfahrt</a></li>
+            <li><a href="bewertungen.html">Bewertungen</a></li>
+            <li><a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/">facebook</a></li>
+        </ul>
+    </nav>
+
+    <main>
+       
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+        }
+
+        .contact-info address {
+            font-style: normal;
+            line-height: 1.6;
+        }
+
+        .contact-info p, address {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        form {
+            display: grid;
+            grid-gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color: #55c1a8;
+            color: #34495E;
+            cursor: pointer;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #21866f;
+        }
+
+        .contact-links a {
+            color: #223947;
+            text-decoration: none;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+<div class="contact-container">
+<center>
+    <h1>Kontakt</h1>
+</center>
+
+    <div class="contact-info">
+    <center>
+        <address>
+            Tierpraxis am Wanner Markt<br>
+            Hauptstraße 341, 44649 Herne, Deutschland<br>
+            📞Tel.: <a href="tel:+4923255949757">+49 23 255949757</a><br>
+            📱 Mobil: <a href="tel:+491749629763">+49 174 9629763</a><br>
+            📧E-Mail: <a href="mailto:info@vet-wannermarkt.de">info@vet-wannermarkt.de</a><br>
+            🌐 Webseite: <a href="https://www.vet-wannermarkt.de/" target="_blank">www.vet-wannermarkt.de</a><br>
+            <a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/">facebook</a> 
+                <a href="https://whatsapp.com/channel/0029Vb5nR5D0gcfCuvVYgl23">whatsapp</a>
+        </address>
+    </center>
+
+    </div>
+
+    <form action="https://formspree.io/f/mldjvqvk" method="POST">
+        <label for="name">Ihr Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Ihre E-Mail-Adresse:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Ihre Nachricht:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Nachricht senden">
+    </form>
+</div>
+
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://whatsapp.com/channel/0029Vb5nR5D0gcfCuvVYgl23" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+           <!--     <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>      
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+    -->
+        </div>
+        <div class="privacy">
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+    <script>
+        // Function to toggle the visibility of the menu
+        function toggleMenu() {
+            var menu = document.getElementById('menu-bar');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tierpraxis am Wanner Markt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="Business Logo"></a>
+        </div>
+        <div class="business-name">
+            <h2><center>Tierpraxis <br>am Wanner Markt</center></h2>
+        </div>
+    </header>
+  
+    <a href="tel:01749629763" class="floating-call-button" title="Notfall anrufen">
+        📞 Notfall
+      </a>
+
+    <nav>
+        <button class="menu-button" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> Menu
+        </button>
+        <ul id="menu-bar">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="praxis.html">Praxis</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="stellenangebote.html">Stellenangebote</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="terminvereinbarung.html">Terminvereinbarung</a></li>
+            <li><a href="openinghours.html">Öffnungszeiten</a></li>
+            <li><a href="anfahrt.html">Anfahrt</a></li>
+            <li><a href="bewertungen.html">Bewertungen</a></li>
+            <li><a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/">facebook</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <center>
+                <h1>Herzlich willkommen in der Tierarztpraxis am Wanner Markt</h1>
+              
+                <p>Wir freuen uns, Sie und Ihr Tier auf unserer Website begrüßen zu dürfen! In unserer modernen Tierarztpraxis im Herzen von Herne-Wanne steht die Gesundheit Ihres Haustiers an erster Stelle. 
+                    <p>Mit viel Herz, Kompetenz und langjähriger Erfahrung bieten wir individuelle Betreuung und umfassende tiermedizinische Versorgung – von der Vorsorge bis zur Notfallbehandlung.</p>
+              
+                <h2>Fürsorgliche Betreuung für Ihr Tier</h2>
+                <p>Unsere Praxis ist spezialisiert auf Kleintiere wie Hunde, Katzen, Kaninchen und andere Heimtiere. 
+                    <p>Wir nehmen uns Zeit für jede Patientin und jeden Patienten, um die bestmögliche Behandlung zu gewährleisten. 
+                        <p>Ihre Fellnasen sind bei uns in den besten Händen – liebevoll und professionell versorgt. ❤️🐾🐶🐱🐾❤️</p>
+        </center>     
+                <h2>Was uns auszeichnet</h2>
+                <ul>
+                  <li>✅ Persönliche und ruhige Atmosphäre</li>
+                  <li>✅ Moderne Ausstattung und Diagnostik</li>
+                  <li>✅ Notfallversorgung und Hausbesuche</li>
+                  <li>✅ Individuelle Beratung rund um Gesundheit, Verhalten und Vorsorge</li>
+                  <li>✅ Mitfühlende Betreuung auch am Lebensende</li>
+                </ul>
+              
+                
+                <p>Wir freuen uns auf Ihren Besuch – und ganz besonders auf Ihre tierischen Begleiter!</p>
+
+              
+
+            
+            <h1><br></h1>
+           <center> <h2>Unsere Besucher in Bildern</h2></center>
+            <div class="slideshow-wrapper">
+            
+                <div class="slideshow-container">
+              <div class="slide"><img src="assets/sleidshow1/Logo.jpeg" alt="Foto 1"></div>
+              <div class="slide"><img src="assets/sleidshow1/20.png" alt="Foto 2"></div>
+              <div class="slide"><img src="assets/sleidshow1/21.png" alt="Foto 3"></div>
+              <div class="slide"><img src="assets/sleidshow1/22.png" alt="Foto 4"></div>
+              <div class="slide"><img src="assets/sleidshow1/23.png" alt="Foto 5"></div>
+              <div class="slide"><img src="assets/sleidshow1/24.png" alt="Foto 6"></div>
+              <div class="slide"><img src="assets/sleidshow1/30.jpeg" alt="Foto 7"></div>
+
+
+          
+              <a class="prev" onclick="manualSlide(-1)">❮</a>
+              <a class="next" onclick="manualSlide(1)">❯</a>
+
+        </div>
+        <br><br>
+    
+        <h3>Besuchen Sie uns gerne vor Ort – wir freuen uns auf Sie!</h3>
+
+
+
+        </main>
+          
+          
+          <script>
+            let currentSlide = 0;
+            let slideTimeout;
+            const slideDuration = 5000; // 5 Sekunden
+            const resumeAfterManual = 20000; // 20 Sekunden nach manuellem Wechsel
+          
+            const slides = document.querySelectorAll('.slide');
+          
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.style.display = (i === index) ? 'block' : 'none';
+              });
+              currentSlide = index;
+            }
+          
+            function nextSlide() {
+              let next = (currentSlide + 1) % slides.length;
+              showSlide(next);
+              slideTimeout = setTimeout(nextSlide, slideDuration);
+            }
+          
+            function manualSlide(direction) {
+              clearTimeout(slideTimeout);
+              let newIndex = (currentSlide + direction + slides.length) % slides.length;
+              showSlide(newIndex);
+              slideTimeout = setTimeout(nextSlide, resumeAfterManual);
+            }
+          
+            // Start
+            showSlide(currentSlide);
+            slideTimeout = setTimeout(nextSlide, slideDuration);
+          </script>
+          
+
+    <footer>
+        <div class="social-media">
+            <a href="https://www.facebook.com/people/Tierarztpraxis-am-Wanner-Markt/61573683383825/" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://whatsapp.com/channel/0029Vb5nR5D0gcfCuvVYgl23" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+         <!--     <a href="https://instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>      
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+    -->
+        </div>
+        <div class="privacy">
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+    <script>
+        // Function to toggle the visibility of the menu
+        function toggleMenu() {
+            var menu = document.getElementById('menu-bar');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
